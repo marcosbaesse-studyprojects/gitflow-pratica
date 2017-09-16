@@ -58,3 +58,39 @@ vMAJOR.MINOR.PATCH.
 
 * git flow release start <versao>: Onde versão segue o padrão Semantic Versining: 0.0.1, 0.0.2, 0.1.0, 1.0.0
 
+# Administração de releases
+
+Pegar uma release do server
+* git flow release track &ltversao&gt
+
+# Criando hotfixes
+
+Corrigir erros críticos ligados à release
+
+Essa correção deve ser mesclada em master e em develop
+
+criar o hotfixes
+* git flow hotfix start &ltversão&gt // exemplo, 0.0.2
+
+Então adciona e comita as alterações
+
+Aì executa
+* git flow hotfix finish &ltversão&gt // exemplo, 0.0.2
+
+A hotfix deve ter a mesma versão de uma release que deseja ser consertada
+
+# Criando bugfixes
+
+São erros que não se deseja gerar uma nova versão quando forem ser produzidos.
+
+* git flow start bugfix start nome_do_bug
+* git add arquivo
+* git commit
+* git flow bugfix finish nome_do_bug
+
+# Administrando reponsitorio com SourceTree
+
+Ferramenta grafica de controle de versões em git ou mercurial.
+
+
+
